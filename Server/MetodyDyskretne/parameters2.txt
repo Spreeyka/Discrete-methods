@@ -1,0 +1,21 @@
+**
+height
+width
+length
+boundary (Moore / Neumann)
+neighborhoodType (Periodic / Absorbing)
+Number of nucleons
+numberOfIterations
+kt
+numberOfMonteCarloIterations
+**
+
+50
+50
+4
+Absorbing
+Moore
+5
+10
+0,6
+1

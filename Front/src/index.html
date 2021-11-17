@@ -1,0 +1,55 @@
+<head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metody dyskretne</title>
+
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="form-box">
+            <p class="form-box__info">Podaj parametry potrzebne do wygenerowania mikrostruktury</p>
+            <form class="form-box__form form">
+                <input class="form__text-input" name="X" id="xInput" placeholder="x">
+                <input class="form__text-input" name="Y" id="yInput" placeholder="y">
+                <input class="form__text-input" name="Z" id="zInput" placeholder="z">
+                <div class="select-container">
+                    <label for="standard-select">Warunki brzegowe</label>
+                    <div class="select">
+                        <select id="boundary-select">
+                            <option value="Periodic">Periodyczne</option>
+                            <option value="Absorbing">Absorbujące</option>
+                        </select>
+                    </div>
+                    <label for="standard-select">Typ sąsiedztwa</label>
+                    <div class="select">
+                        <select id="neighborhood-select" name="neighborhood-select">
+                            <option value="Moore">Moore</option>
+                            <option value="Neumann">Von Neumann</option>
+                        </select>
+                    </div>
+                </div>
+                <input class="form__text-input" name="nucleons" id="nucleons" placeholder="Ilość zarodków">
+                <input class="form__text-input" name="numberOfIterations" id="numberOfIterations"
+                    placeholder="Liczba iteracji">
+                <input class="form__text-input" name="kt" id="kt" placeholder="kt">
+                <input class="form__text-input" name="MonteCarloIterations" id="monteCarloIterations"
+                    placeholder="Liczba iteracji Monte Carlo">
+                <button class="form__button output">Generuj output</button>
+
+                <div>
+                </div>
+            </form>
+            <div class="button__container">
+                <label for="file-input" id="file-input-label">Wybierz plik</label>
+                <input type="file" id="file-input" accept="text/plain" />
+                <button class="form__button generate__button">Generuj 3D</button>
+            </div>
+        </div>
+        <canvas class="webgl"></canvas>
+    </div>
+</body>
+
+</html>
